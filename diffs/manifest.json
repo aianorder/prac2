@@ -1,0 +1,138 @@
+{
+  "direction": "single_agent -> two_agents",
+  "files": [
+    {
+      "file": "README.md",
+      "scope": "variant",
+      "status": "changed",
+      "left": "single_agent/README.md",
+      "right": "two_agents/README.md",
+      "left_sha256": "426bfbba9a84e2784eca97705da5328e44c3b2d5342c24b68150a1e3fe378f35",
+      "right_sha256": "b3fafe50e73d28165d018e2f36f504d04e561944cd1ca18473aa2bcd7801ebd6",
+      "patch": "README.md.patch"
+    },
+    {
+      "file": "__init__.py",
+      "scope": "variant",
+      "status": "changed",
+      "left": "single_agent/__init__.py",
+      "right": "two_agents/__init__.py",
+      "left_sha256": "9660855003be00b750239b4431ae7e53e9c1d481b8d2fedfc8a33f61070194e3",
+      "right_sha256": "325bf3765f103ec194d2d64da6b3170b64c28f168f04ded47528ca0c10e03ff2",
+      "patch": "__init__.py.patch"
+    },
+    {
+      "file": "cartpole_bc.py",
+      "scope": "variant",
+      "status": "changed",
+      "left": "single_agent/cartpole_bc.py",
+      "right": "two_agents/cartpole_bc.py",
+      "left_sha256": "2fc92f56131288330b03e2bc3f9bedf857e67efab50b251030a4959009106a3e",
+      "right_sha256": "d97a5b2dcc02ba8bebf9f1a72a70eec069ca9595bb3f86183add67cf2067e742",
+      "patch": "cartpole_bc.py.patch"
+    },
+    {
+      "file": "test_cartpole.py",
+      "scope": "variant",
+      "status": "changed",
+      "left": "single_agent/test_cartpole.py",
+      "right": "two_agents/test_cartpole.py",
+      "left_sha256": "3d8991423cd6e50dc80a8272a24e805c3266c6d0463dbfdd8dba566e5ae35fad",
+      "right_sha256": "48b92539c939bc0281b079ca301e12106b3ee3471ec2d5dd4646a11b70e17cce",
+      "patch": "test_cartpole.py.patch"
+    },
+    {
+      "file": "shared/.gitignore",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/.gitignore",
+      "right": "shared/.gitignore",
+      "left_sha256": "7cb3fa2208700519abf8bba5557f383a56fb6ea41db447ae79a882eeca8d7b47",
+      "right_sha256": "7cb3fa2208700519abf8bba5557f383a56fb6ea41db447ae79a882eeca8d7b47",
+      "patch": "shared__.gitignore.patch"
+    },
+    {
+      "file": "shared/README.md",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/README.md",
+      "right": "shared/README.md",
+      "left_sha256": "6efdc984fc563ed299be72cbfbcc9e1826b8fa72de663ff2fddaa0551e414f88",
+      "right_sha256": "6efdc984fc563ed299be72cbfbcc9e1826b8fa72de663ff2fddaa0551e414f88",
+      "patch": "shared__README.md.patch"
+    },
+    {
+      "file": "shared/HIGHWAY_FORMAT.md",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/HIGHWAY_FORMAT.md",
+      "right": "shared/HIGHWAY_FORMAT.md",
+      "left_sha256": "e639a3271dd34a5e38d250a0bff0347e6e56ebfa83e749a40975ebc7f0ef9ef0",
+      "right_sha256": "e639a3271dd34a5e38d250a0bff0347e6e56ebfa83e749a40975ebc7f0ef9ef0",
+      "patch": "shared__HIGHWAY_FORMAT.md.patch"
+    },
+    {
+      "file": "shared/pyproject.toml",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/pyproject.toml",
+      "right": "shared/pyproject.toml",
+      "left_sha256": "6a6a2ea5ffe1e918da641b3d073c3e3b11f593868fff337dcc0dbd52aa7001ac",
+      "right_sha256": "6a6a2ea5ffe1e918da641b3d073c3e3b11f593868fff337dcc0dbd52aa7001ac",
+      "patch": "shared__pyproject.toml.patch"
+    },
+    {
+      "file": "shared/practice_io.py",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/practice_io.py",
+      "right": "shared/practice_io.py",
+      "left_sha256": "9962ffefcf8effbb208989b964ba4a0221052fb2fd6428ff25fe1469d9d7fe42",
+      "right_sha256": "9962ffefcf8effbb208989b964ba4a0221052fb2fd6428ff25fe1469d9d7fe42",
+      "patch": "shared__practice_io.py.patch"
+    },
+    {
+      "file": "shared/plot_highway.py",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/plot_highway.py",
+      "right": "shared/plot_highway.py",
+      "left_sha256": "2474516aaccbc2fafc08dada8e77fa5cea19ad8c61498be2cc31d492577bec8b",
+      "right_sha256": "2474516aaccbc2fafc08dada8e77fa5cea19ad8c61498be2cc31d492577bec8b",
+      "patch": "shared__plot_highway.py.patch"
+    },
+    {
+      "file": "shared/test_highway_plot.py",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/test_highway_plot.py",
+      "right": "shared/test_highway_plot.py",
+      "left_sha256": "0097fc65f85f86ebfa78c657079f149e03b5f65302762965f917eb7609d69792",
+      "right_sha256": "0097fc65f85f86ebfa78c657079f149e03b5f65302762965f917eb7609d69792",
+      "patch": "shared__test_highway_plot.py.patch"
+    },
+    {
+      "file": "shared/example_highway.csv",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/example_highway.csv",
+      "right": "shared/example_highway.csv",
+      "left_sha256": "30a547b954fc0861fdc189d615a1d4b11e45ab9d200b3fe2d6255c68a71dc80e",
+      "right_sha256": "30a547b954fc0861fdc189d615a1d4b11e45ab9d200b3fe2d6255c68a71dc80e",
+      "patch": "shared__example_highway.csv.patch"
+    },
+    {
+      "file": "shared/make_diffs.py",
+      "scope": "shared",
+      "status": "unchanged",
+      "left": "shared/make_diffs.py",
+      "right": "shared/make_diffs.py",
+      "left_sha256": "05c0a91a81725661bbf74071f5d4d7f0e35542d5538dcb6fc7cc93ab2fb33c55",
+      "right_sha256": "05c0a91a81725661bbf74071f5d4d7f0e35542d5538dcb6fc7cc93ab2fb33c55",
+      "patch": "shared__make_diffs.py.patch"
+    }
+  ],
+  "source_files": 13,
+  "changed": 4,
+  "note": "Diff generation reads source files only; no collection, training, evaluation or tests are executed."
+}

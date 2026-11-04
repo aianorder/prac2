@@ -1,0 +1,11 @@
+--- single_agent/cartpole_bc.py
++++ two_agents/cartpole_bc.py
+@@ -25,7 +25,7 @@
+ from practice_io import new_directory, sha256_file, strict_json, write_csv, write_json
+ 
+ ENV_ID = "CartPole-v1"
+-AGENT_COUNT = 1
++AGENT_COUNT = 2
+ VARIANT = "single_agent" if AGENT_COUNT == 1 else "two_agents"
+ TEACHER_GAINS = np.array([0.02, 0.03, 1.0, 0.5], dtype=np.float64)
+ OBSERVATION_FIELDS = ["cart_position", "cart_velocity", "pole_angle", "pole_angular_velocity"]

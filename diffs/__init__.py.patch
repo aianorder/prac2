@@ -1,0 +1,5 @@
+--- single_agent/__init__.py
++++ two_agents/__init__.py
+@@ -1 +1 @@
+-"""Behavior cloning with 1 independent CartPole agent(s)."""
++"""Behavior cloning with 2 independent CartPole agent(s)."""

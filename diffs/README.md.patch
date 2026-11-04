@@ -1,0 +1,28 @@
+--- single_agent/README.md
++++ two_agents/README.md
+@@ -1,18 +1,18 @@
+-# 1 independent CartPole agent(s)
++# 2 independent CartPole agent(s)
+ 
+-This variant has `AGENT_COUNT = 1`. Each learner has its own environment, demonstration data, scaler, MLP weights, optimizer state, and output directory. Agents run sequentially and do not interact.
++This variant has `AGENT_COUNT = 2`. Each learner has its own environment, demonstration data, scaler, MLP weights, optimizer state, and output directory. Agents run sequentially and do not interact.
+ 
+ From the repository root, after installing its dependencies:
+ 
+ ```bash
+-python -m single_agent.cartpole_bc collect --episodes 50 --seed 0
+-python -m single_agent.cartpole_bc train --epochs 50 --seed 42
+-python -m single_agent.cartpole_bc evaluate --episodes 20 --seed 10000
++python -m two_agents.cartpole_bc collect --episodes 50 --seed 0
++python -m two_agents.cartpole_bc train --epochs 50 --seed 42
++python -m two_agents.cartpole_bc evaluate --episodes 20 --seed 10000
+ ```
+ 
+-Use `--help` after each subcommand for paths and hyperparameters. Default outputs are under `runs/single_agent/`.
++Use `--help` after each subcommand for paths and hyperparameters. Default outputs are under `runs/two_agents/`.
+ 
+-- Collection: 50 episodes **per agent**, 50 episodes total at the defaults.
++- Collection: 50 episodes **per agent**, 100 episodes total at the defaults.
+ - Training: 50 epochs per agent, using only that agent's demonstrations.
+ - Environments use the same episode-seed list across agents; exploration RNGs use `seed + agent_id`.
+ - Models and episode splits use `train_seed + agent_id`.

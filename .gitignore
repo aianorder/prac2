@@ -1,0 +1,33 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+build/
+dist/
+.vscode/
+.idea/
+.DS_Store
+# Keep demonstrations, checkpoints, private results and generated plots local.
+runs/
+outputs/
+data/
+*.npz
+*.npy
+*.joblib
+*.pkl
+*.pt
+*.pth
+*.png
+*.mp4
+*.log
+*.zip
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+

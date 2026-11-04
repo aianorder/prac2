@@ -1,0 +1,55 @@
+--- single_agent/README.md
++++ two_agents/README.md
+@@ -1,18 +1,18 @@
+-# 1 independent CartPole agent(s)
++# 2 independent CartPole agent(s)
+ 
+-This variant has `AGENT_COUNT = 1`. Each learner has its own environment, demonstration data, scaler, MLP weights, optimizer state, and output directory. Agents run sequentially and do not interact.
++This variant has `AGENT_COUNT = 2`. Each learner has its own environment, demonstration data, scaler, MLP weights, optimizer state, and output directory. Agents run sequentially and do not interact.
+ 
+ From the repository root, after installing its dependencies:
+ 
+ ```bash
+-python -m single_agent.cartpole_bc collect --episodes 50 --seed 0
+-python -m single_agent.cartpole_bc train --epochs 50 --seed 42
+-python -m single_agent.cartpole_bc evaluate --episodes 20 --seed 10000
++python -m two_agents.cartpole_bc collect --episodes 50 --seed 0
++python -m two_agents.cartpole_bc train --epochs 50 --seed 42
++python -m two_agents.cartpole_bc evaluate --episodes 20 --seed 10000
+ ```
+ 
+-Use `--help` after each subcommand for paths and hyperparameters. Default outputs are under `runs/single_agent/`.
++Use `--help` after each subcommand for paths and hyperparameters. Default outputs are under `runs/two_agents/`.
+ 
+-- Collection: 50 episodes **per agent**, 50 episodes total at the defaults.
++- Collection: 50 episodes **per agent**, 100 episodes total at the defaults.
+ - Training: 50 epochs per agent, using only that agent's demonstrations.
+ - Environments use the same episode-seed list across agents; exploration RNGs use `seed + agent_id`.
+ - Models and episode splits use `train_seed + agent_id`.
+--- single_agent/__init__.py
++++ two_agents/__init__.py
+@@ -1 +1 @@
+-"""Behavior cloning with 1 independent CartPole agent(s)."""
++"""Behavior cloning with 2 independent CartPole agent(s)."""
+--- single_agent/cartpole_bc.py
++++ two_agents/cartpole_bc.py
+@@ -25,7 +25,7 @@
+ from practice_io import new_directory, sha256_file, strict_json, write_csv, write_json
+ 
+ ENV_ID = "CartPole-v1"
+-AGENT_COUNT = 1
++AGENT_COUNT = 2
+ VARIANT = "single_agent" if AGENT_COUNT == 1 else "two_agents"
+ TEACHER_GAINS = np.array([0.02, 0.03, 1.0, 0.5], dtype=np.float64)
+ OBSERVATION_FIELDS = ["cart_position", "cart_velocity", "pole_angle", "pole_angular_velocity"]
+--- single_agent/test_cartpole.py
++++ two_agents/test_cartpole.py
+@@ -7,7 +7,7 @@
+ 
+ from . import cartpole_bc as bc
+ 
+-EXPECTED_AGENTS = 1
++EXPECTED_AGENTS = 2
+ 
+ 
+ def test_variant_agent_count():

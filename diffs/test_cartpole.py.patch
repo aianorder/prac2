@@ -1,0 +1,11 @@
+--- single_agent/test_cartpole.py
++++ two_agents/test_cartpole.py
+@@ -7,7 +7,7 @@
+ 
+ from . import cartpole_bc as bc
+ 
+-EXPECTED_AGENTS = 1
++EXPECTED_AGENTS = 2
+ 
+ 
+ def test_variant_agent_count():
